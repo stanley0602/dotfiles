@@ -1,0 +1,35 @@
+" GVIM Settings
+if has('gui_running')
+    set guioptions-=M    " Don't load Menu bar
+    colorscheme desert
+    set guifont=Monospace\ 11
+else
+    colorscheme jellybeans
+endif
+
+source ~/.vim/startup/functions.vim
+source ~/.vim/startup/commands.vim
+source ~/.vim/startup/settings.vim
+source ~/.vim/startup/plugins.vim
+source ~/.vim/startup/mappings.vim
+
+" load ~/.vimrc_local customizations if available
+let $LOCALFILE=expand("~/.vimrc_local")
+if filereadable($LOCALFILE)
+    source $LOCALFILE
+endif
+
+" Vimscript Syntax
+" Varable scope
+"   g:var - global.
+"   a:var - function argument.
+"   l:var - local to function.
+"   b:var - local to buffer.
+"   w:var - local to window.
+"   t:var - local to tab.
+"   v:var - Predefined by Vim.
+" Function
+"   Vimscript functions must start with a capital letter if they are unscoped!
+"   To redefine a function that already exists, use function!
+"   Prefix script-local functions with s:
+

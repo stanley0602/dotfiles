@@ -1,0 +1,48 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vim/vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.zgen: zgen/
+    ~/.bash: bash/
+    ~/.bashrc: bash/bashrc
+    ~/.bin: bin/
+    ~/.inputrc: inputrc
+    ~/.clang-format: clang-format
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.fzf: fzf/
+    ~/.ctags: ctags_conf
+
+- shell:
+    - [git submodule update --init --recursive, Updating submodules]
+    -
+      command: ./fzf/install --key-bindings --completion --no-update-rc
+      stdin: true
+      stdout: true
+      stderr: true
+    -
+      command: ./fonts/install.sh
+      stdin: true
+      stdout: true
+      stderr: true
+    -
+      command: vim +PlugUpdate +PlugUpgrade +UpdateRemotePlugins +qall
+      stdin: true
+      stdout: true
+      stderr: true
+    #-
+      #command: ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+      #stdin: true
+      #stdout: true
+      #stderr: true
+    -
+      command: ~/.tmux/install_plugins.sh
+      stdin: true
+      stdout: true
+      stderr: true

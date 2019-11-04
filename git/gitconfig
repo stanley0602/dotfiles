@@ -1,0 +1,54 @@
+[user]
+    name = stanley0602
+    email = stanleyli0602@gmail.com
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+[push]
+    default = simple
+[color]
+    ui = true
+    status = true
+    branch = true
+    diff = true
+[core]
+    preloadindex = true
+    pager = less -R -n -F -X -E
+    excludesfile = ~/.gitignore_global
+[pager]
+    status = true
+[grep]
+    lineNumber = true
+[mergetool]
+    keepBackup = false
+[mergetool "fugitive"]
+    cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+[merge]
+    tool = fugitive
+[pull]
+    rebase = true
+[push]
+    default = simple
+[alias]
+    br = branch
+    ci = commit
+    cia = commit --amend --no-edit
+    co = checkout
+    cp = cherry-pick
+    st = status
+    f = fetch
+    ps = push
+    pl = pull
+    pr = pull --rebase
+    r = remote
+    rb = rebase
+    l = log --decorate --oneline --graph --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+    lg = log --decorate --oneline --graph --branches  --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+    df = diff
+    dfs = diff --stat
+    dfc = diff --cached
+    dfcs = diff --cached --stat
+    # List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+[include]
+    path = ~/.gitconfig_local
