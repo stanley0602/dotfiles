@@ -29,8 +29,8 @@ Plug 'tpope/vim-surround'                              " generate surroundings
 Plug 'machakann/vim-highlightedyank'                   " highlighted the yanked region
 Plug 'Yggdroot/indentLine'                             " indentline
 Plug 'tpope/vim-vinegar'                               " netrw improvement
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 Plug 'beanworks/vim-phpfmt'
 Plug 'vim-airline/vim-airline'                         " Airline for pretty status/tab lines
 Plug 'vim-airline/vim-airline-themes'                  " airline themes
@@ -165,10 +165,14 @@ if !has('nvim')
     map y <Plug>(highlightedyank)
 endif
 
-"   vim-grepper config
+" vim-grepper config
+"  open: open the quickfix window
+"  switch: when the quickfix window opens, swith to it
+"  jump: jump to the first match
 let g:grepper = {
     \ 'tools': ['git', 'grep'],
     \ 'open': 1,
+    \ 'switch': 1,
     \ 'jump': 1,
     \ }
 

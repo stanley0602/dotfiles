@@ -65,6 +65,9 @@ nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
 " vim-grepper mapping
 nnoremap <Leader>gg :call CdRoot()<CR>:GrepperGit 
+" visual select and git grep
+nmap gs  <plug>(GrepperOperator)
+xmap gs  <plug>(GrepperOperator)
 
 "ctrlp mapping (ctrlT will open in a new tab)
 nnoremap <leader>fp :CtrlP<CR>
