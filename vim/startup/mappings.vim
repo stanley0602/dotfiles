@@ -35,9 +35,6 @@ imap <silent> <F3> <c-o>:set nohlsearch!<CR>
 " Toggle Syintax Highlighting
 nnoremap <F4> :call ToggleSyntax()<CR>
 
-" Switch between conventional/relative numbering
-nnoremap <F5> :CtrlPClearCache<CR>
-
 " Expand Tab Toggle
 nn <F6> :set expandtab!<CR>
 
@@ -68,9 +65,6 @@ nnoremap <Leader>gg :call CdRoot()<CR>:GrepperGit
 " visual select and git grep
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
-
-"ctrlp mapping (ctrlT will open in a new tab)
-nnoremap <leader>fp :CtrlP<CR>
 
 " fzf to search from git repo root
 command! FzfFromRoot execute 'Files' FindGitRoot()

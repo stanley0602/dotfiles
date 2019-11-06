@@ -9,7 +9,6 @@ Plug 'junegunn/fzf.vim'                                " Fuzzy search
 Plug 'benmills/vimux'                                  " vim and tmux integration
 Plug 'tpope/vim-fugitive'                              " Fugitive Git Wrapper
 Plug 'christoomey/vim-tmux-navigator'                  " Tmux movement mappings
-Plug 'ctrlpvim/ctrlp.vim'                              " ctrlP Plugin
 Plug 'majutsushi/tagbar'                               " Easy Ctag explorer
 Plug 'ludovicchabant/vim-gutentags'                    " tag file manager
 Plug 'mhinz/vim-grepper'                               " vim/git-grep integration
@@ -88,19 +87,6 @@ let g:rainbow_active = 1
 set updatetime=500
 let g:gitgutter_enabled = 1
 let g:gitgutter_max_signs = 1000
-
-"  ctrlp config and help
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMRU'
-let g:ctrlp_use_caching = 1 "enable caching
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard | egrep -v "^\.|compiled_views"']  " ignore files in .gitignore
-let g:ctrlp_working_path_mode = 'ra'
-" below won't apply when g:ctrlp_user_command is defined
-"let g:ctrlp_custom_ignore = {
-  "\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  "\ 'file': '\v\.(exe|so|dll|\*)$',
-  "\ 'link': 'some_bad_symbolic_links',
-  "\ }
 
 " vim-clang-format
 let g:clang_format#detect_style_file = 1
