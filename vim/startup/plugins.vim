@@ -31,6 +31,7 @@ Plug 'tpope/vim-vinegar'                               " netrw improvement
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 Plug 'beanworks/vim-phpfmt'
+"Plug 'joonty/vim-phpqa'
 Plug 'vim-airline/vim-airline'                         " Airline for pretty status/tab lines
 Plug 'vim-airline/vim-airline-themes'                  " airline themes
 
@@ -108,7 +109,7 @@ autocmd FileType python set equalprg=autopep8\ -
 let g:phpfmt_standard = 'PSR2'
 let g:phpfmt_autosave = 0
 autocmd FileType php nnoremap <buffer><Leader>cf :<C-u>PhpFmt<CR>
-autocmd FileType pph vnoremap <buffer><Leader>cf :PhpFmt<CR>
+autocmd FileType php vnoremap <buffer><Leader>cf :PhpFmt<CR>
 
 "  doxygen
 let g:DoxygenToolkit_authorName="Stanley Li <stanleyli0602@gmail.com>"

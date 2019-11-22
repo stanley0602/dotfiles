@@ -130,3 +130,6 @@ set gdefault
 
 "" set to use new tab
 set switchbuf+=usetab,newtab
+
+"" TIPS
+"" - use "*y to copy to system clipboard, which is *
