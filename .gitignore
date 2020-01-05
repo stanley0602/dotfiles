@@ -2,6 +2,7 @@ vim/bundle/*
 !vim/bundle/Vundle.vim
 vim/plugged/*
 vim/backup/*
+!vim/backup/.gitkeep
 vim/config/*
 vim/non_used/*
 vim/tmp/*
