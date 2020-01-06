@@ -4,7 +4,7 @@ set rtp+=~/.fzf
 " check https://vimawesome.com/ for popular plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'w0rp/ale'                                        " Asynchronized Syntax checking
+Plug 'dense-analysis/ale'                              " Asynchronized Syntax checking
 Plug 'junegunn/fzf.vim'                                " Fuzzy search
 Plug 'benmills/vimux'                                  " vim and tmux integration
 Plug 'tpope/vim-fugitive'                              " Fugitive Git Wrapper
