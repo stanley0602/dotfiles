@@ -23,6 +23,7 @@ KEYTIMEOUT=10 # corresponds to 100ms
 
 # Use vim as the editor
 export EDITOR=vim
+export VISUAL=vim
 
 # Use vim style line editing in zsh
 bindkey -v
