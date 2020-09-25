@@ -66,10 +66,6 @@ nnoremap <Leader>gg :call CdRoot()<CR>:GrepperGit
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
 
-" fzf to search from git repo root
-command! FzfFromRoot execute 'Files' FindGitRoot()
-nnoremap <leader>ff :FzfFromRoot<CR>
-
 " Tab handling shortcuts
 " xterm does not work, since only send out Tab key (terminal issue)
 nnoremap <leader>tn :tabnext<CR>

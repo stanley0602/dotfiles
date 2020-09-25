@@ -33,14 +33,18 @@ function GetPlatform()
     endif
 endfunction
 
-function FindGitRoot()
+function FindRepoRoot()
+    let repo_root=system('hg root 2> /dev/null')[:-2]
+    if strlen(repo_root) > 0
+        return repo_root
+    endif
     return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 
 " cd to the root directory of the current git repo
 function CdRoot()
     cd %:h
-    exec "cd " . FindGitRoot()
+    exec "cd " . FindRepoRoot()
     pwd
 endfunction
 

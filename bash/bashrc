@@ -12,3 +12,5 @@ source ~/.zsh/functions.zsh
 
 # allow local customizations in the ~/.bashrc_local_after file
 [ -f ~/.bash_local/bashrc_local_after.sh ] && source ~/.bash_local/bashrc_local_after.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

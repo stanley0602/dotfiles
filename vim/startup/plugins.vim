@@ -189,3 +189,7 @@ let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=2
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_hotkey='<C-m>'
+
+" fzf to search from git/mercurial repo root
+command! FzfFromRoot execute 'Files' FindRepoRoot()
+nnoremap <leader>ff :FzfFromRoot<CR>

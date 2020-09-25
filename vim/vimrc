@@ -14,7 +14,7 @@ source ~/.vim/startup/plugins.vim
 source ~/.vim/startup/mappings.vim
 
 " load ~/.vimrc_local customizations if available
-let $LOCALFILE=expand("~/.vimrc_local")
+let $LOCALFILE=resolve(expand("~/.vimrc_local"))
 if filereadable($LOCALFILE)
     source $LOCALFILE
 endif

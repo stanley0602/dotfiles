@@ -9,3 +9,5 @@ source ~/.zsh/functions.zsh
 source ~/.zsh/exports.zsh
 
 [ -f ~/.zsh_local/zshrc_local_after.zsh ] && source ~/.zsh_local/zshrc_local_after.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
