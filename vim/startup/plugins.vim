@@ -34,6 +34,8 @@ Plug 'beanworks/vim-phpfmt'
 "Plug 'joonty/vim-phpqa'
 Plug 'vim-airline/vim-airline'                         " Airline for pretty status/tab lines
 Plug 'vim-airline/vim-airline-themes'                  " airline themes
+Plug 'lyuts/vim-rtags'
+Plug 'wincent/vim-clipper'                             " send remote dev server yanked text to local clipboard
 
 
 " Linux-Only plug-ins
@@ -176,6 +178,7 @@ set statusline+=%{gutentags#statusline()}}
 let g:gutentags_modules = ['ctags']
 let g:gutentags_project_root = ['.git', '.hg', '.root']
 let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_enabled=0
 "let g:gutentags_cache_dir = ".git"
 "let g:gutentags_file_list_command = {
         "\ 'markers': {
@@ -193,3 +196,20 @@ let vim_markdown_preview_hotkey='<C-m>'
 " fzf to search from git/mercurial repo root
 command! FzfFromRoot execute 'Files' FindRepoRoot()
 nnoremap <leader>ff :FzfFromRoot<CR>
+
+" vim-rtags mappings
+let g:rtagsUseDefaultMappings = 1
+let g:rtagsJumpStackMaxSize = 2000
+let g:rtagsUseLocationList = 0
+noremap <C-T>. :call rtags#JumpTo()<CR>
+noremap <C-T>b <C-o>
+noremap <C-T>f :call rtags#FindRefs()<CR>
+noremap <C-T>n :call rtags#FindRefsByName(input("Pattern? ", "", "customlist,rtags#CompleteSymbols"))<CR>
+noremap <C-T>s :call rtags#FindSymbols(input("Pattern? ", "", "customlist,rtags#CompleteSymbols"))<CR>
+noremap <C-T>r :call rtags#ReindexFile()<CR>
+
+" copy/paste solution when vim is not built with +clipboard
+" 1) install clipper (https://github.com/wincent/clipper) on local mac
+" 2) install vim-clipper plugin from remote
+" 3) set up auto forward as below vim-clipper setting
+let g:ClipperAuto=0 "yanked text will be sent to local clipper automatically
