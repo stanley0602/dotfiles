@@ -1,6 +1,7 @@
-Host github
-    User: git
-    HostName: github.com
-    IdentityFile: ~/.ssh/key_github
-
+# include should be put at the top
 Include ~/.ssh/local_config
+Host github
+    User git
+    HostName github.com
+    IdentityFile ~/.ssh/key_github
+
