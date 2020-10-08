@@ -14,3 +14,7 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "rtags"]
+	path = rtags
+	url = https://github.com/Andersbakken/rtags
+	branch = master
