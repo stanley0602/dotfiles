@@ -23,7 +23,8 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }        " scala plugin
 Plug 'tell-k/vim-autopep8', { 'for': 'python' }        " Python formatter
 Plug 'rhysd/vim-clang-format', { 'on': 'ClangFormat' } " Clang format for C/C++/ObjC
 Plug 'luochen1990/rainbow'                             " Rainbow parenthesis coloring
-Plug 'scrooloose/nerdcommenter'                        " NERDCommenter for easy commenting
+Plug 'preservim/nerdcommenter'                        " NERDCommenter for easy commenting
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'                              " generate surroundings
 Plug 'machakann/vim-highlightedyank'                   " highlighted the yanked region
 Plug 'Yggdroot/indentLine'                             " indentline
