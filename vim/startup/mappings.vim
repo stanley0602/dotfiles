@@ -70,6 +70,8 @@ xmap gs  <plug>(GrepperOperator)
 " xterm does not work, since only send out Tab key (terminal issue)
 nnoremap <leader>tn :tabnext<CR>
 nnoremap <leader>tp :tabprevious<CR>
+nnoremap <leader>tl :tabm -1<CR>
+nnoremap <leader>tr :tabm +1<CR>
 
 " tags jum
 nnoremap <leader>jd <C-W>]
