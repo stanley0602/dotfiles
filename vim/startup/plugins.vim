@@ -8,6 +8,7 @@ Plug 'dense-analysis/ale'                              " Asynchronized Syntax ch
 Plug 'junegunn/fzf.vim'                                " Fuzzy search
 Plug 'benmills/vimux'                                  " vim and tmux integration
 Plug 'tpope/vim-fugitive'                              " Fugitive Git Wrapper
+Plug 'phleet/vim-mercenary'                            " Mercurial wrapper
 Plug 'christoomey/vim-tmux-navigator'                  " Tmux movement mappings
 Plug 'majutsushi/tagbar'                               " Easy Ctag explorer
 Plug 'ludovicchabant/vim-gutentags'                    " tag file manager
