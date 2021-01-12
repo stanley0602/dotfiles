@@ -1,26 +1,64 @@
 - clean: ['~']
-- create: 
+- create:
   - ~/.ssh
 - link:
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
-    ~/.tmux: tmux/
-    ~/.tmux.conf: tmux/tmux.conf
-    ~/.vim: vim/
-    ~/.vimrc: vim/vimrc
-    ~/.zsh: zsh/
-    ~/.zshrc: zsh/zshrc
-    ~/.zshenv: zsh/zshenv
-    ~/.zgen: zgen/
-    ~/.bash: bash/
-    ~/.bashrc: bash/bashrc
-    ~/.bin: bin/
-    ~/.inputrc: inputrc
-    ~/.clang-format: clang-format
-    ~/.ycm_extra_conf.py: ycm_extra_conf.py
-    ~/.fzf: fzf/
-    ~/.ctags: ctags_conf
-    ~/.ssh/config: ssh/config
+    ~/.gitconfig:
+        path: git/gitconfig
+        relink: true
+    ~/.gitignore_global:
+        path: git/gitignore_global
+        relink: true
+    ~/.tmux:
+        path: tmux/
+        relink: true
+    ~/.tmux.conf:
+        path: tmux/tmux.conf
+        relink: true
+    ~/.vim:
+        path: vim/
+        relink: true
+    ~/.vimrc:
+        path: vim/vimrc
+        relink: true
+    ~/.zsh:
+        path: zsh/
+        relink: true
+    ~/.zshrc:
+        path: zsh/zshrc
+        relink: true
+    ~/.zshenv:
+        path: zsh/zshenv
+        relink: true
+    ~/.zgen:
+        path: zgen/
+        relink: true
+    ~/.bash:
+        path: bash/
+        relink: true
+    ~/.bashrc:
+        path: bash/bashrc
+        relink: true
+    ~/.bin:
+        path: bin/
+        relink: true
+    ~/.inputrc:
+        path: inputrc
+        relink: true
+    ~/.clang-format:
+        path: clang-format
+        relink: true
+    ~/.ycm_extra_conf.py:
+        path: ycm_extra_conf.py
+        relink: true
+    ~/.fzf:
+        path: fzf/
+        relink: true
+    ~/.ctags:
+        path: ctags_conf
+        relink: true
+    ~/.ssh/config:
+        path: ssh/config
+        relink: true
 
 - shell:
     - [git submodule update --init --recursive, Updating submodules]

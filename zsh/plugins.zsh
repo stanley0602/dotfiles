@@ -2,6 +2,7 @@
 source ~/.zgen/zgen.zsh
 
 # check if there's no init script
+# if plugins do not get installed properly, zgen reset (to delete the init file)
 if ! zgen saved; then
   echo "Creating a zgen save"
 
