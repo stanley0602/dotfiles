@@ -5,7 +5,8 @@ set rtp+=~/.fzf
 call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'                              " Asynchronized Syntax checking
-Plug 'junegunn/fzf.vim'                                " Fuzzy search
+Plug 'junegunn/fzf'                                    " Fuzzy search
+Plug 'junegunn/fzf.vim'                                " Fuzzy search vim plug
 Plug 'benmills/vimux'                                  " vim and tmux integration
 Plug 'tpope/vim-fugitive'                              " Fugitive Git Wrapper
 Plug 'phleet/vim-mercenary'                            " Mercurial wrapper
@@ -24,7 +25,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }        " scala plugin
 Plug 'tell-k/vim-autopep8', { 'for': 'python' }        " Python formatter
 Plug 'rhysd/vim-clang-format', { 'on': 'ClangFormat' } " Clang format for C/C++/ObjC
 Plug 'luochen1990/rainbow'                             " Rainbow parenthesis coloring
-Plug 'preservim/nerdcommenter'                        " NERDCommenter for easy commenting
+Plug 'preservim/nerdcommenter'                         " NERDCommenter for easy commenting
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'                              " generate surroundings
 Plug 'machakann/vim-highlightedyank'                   " highlighted the yanked region
