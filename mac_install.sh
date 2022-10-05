@@ -16,7 +16,8 @@ brew install \
     zsh \
     htop \
     grip \
-    ctags
+    ctags \
+    fzf
 
 # keep os included vim (old version) and alias to the updated version
 #alias vim=/usr/local/bin/vim
